@@ -101,6 +101,6 @@ def draw_label(screen, color, p, font, name):
         font.render_to(screen, p, name, color)
 
 def draw_point(screen, color, p, size, font = None, name = "", offset = 10):
-    pygame.draw.circle(screen, color, p, size)
+    pygame.draw.circle(screen, color, (int(p[0]), int(p[1])), size)
     if (font != None):
         draw_label(screen, color, (p[0] + offset, p[1]), font, name)
